@@ -15,9 +15,11 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- implemented Angular routing to nav-links. Used routerlink, routerLinkActive, and routerLinkActiveOptions to notuify the user of the active link through a custom class. -->
+    <!-- implemented Angular routing to nav-links. Used routerlink, routerLinkActive, and routerLinkActiveOptions to notify the user of the active link through a custom class. -->
+    <!-- Navbar links -->
+    <!-- implemented event handling to automatically close the bootstrap hamburger menu after a link is clicked. -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-2">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-2 text-center">
         <li class="nav-item">
           <a
             class="nav-link"
@@ -25,22 +27,22 @@
             routerLink="/"
             routerLinkActive="activeLink"
             [routerLinkActiveOptions]="{ exact: true }"
+            (click)="collapseNavbar()"
             >Home</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"></a>
+          <a class="nav-link" href="#" (click)="collapseNavbar()"></a>
         </li>
-        <li class="nav-item dropdown" routerLinkActive="activeLink">
+        <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
+            >Firearms</a
           >
-            Firearms
-          </a>
           <ul class="dropdown-menu mt-3">
             <li>
               <a
@@ -48,6 +50,7 @@
                 routerLink="/firearms/handguns"
                 routerLinkActive="activeLink"
                 [routerLinkActiveOptions]="{ exact: true }"
+                (click)="collapseNavbar()"
                 >Handguns</a
               >
             </li>
@@ -57,6 +60,7 @@
                 routerLink="/firearms/rifles"
                 routerLinkActive="activeLink"
                 [routerLinkActiveOptions]="{ exact: true }"
+                (click)="collapseNavbar()"
                 >Rifles</a
               >
             </li>
@@ -66,6 +70,7 @@
                 routerLink="/firearms/shotguns"
                 routerLinkActive="activeLink"
                 [routerLinkActiveOptions]="{ exact: true }"
+                (click)="collapseNavbar()"
                 >Shotguns</a
               >
             </li>
@@ -75,13 +80,12 @@
           <a class="nav-link" aria-disabled="true">About us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-disabled="true"
-            ><i class="fa cart" style="font-size: 24px">&#xf07a;</i>
-            <!-- String interpolation to display cartItemCount  -->
+          <a class="nav-link" aria-disabled="true">
+            <i class="fa cart" style="font-size: 24px">&#xf07a;</i>
             <span class="badge badge-warning" id="lblCartCount">{{
               cartItemCount
-            }}</span></a
-          >
+            }}</span>
+          </a>
         </li>
       </ul>
       <form class="d-flex me-5" role="search">
@@ -98,7 +102,7 @@
 </nav>
 
 <div class="container">
-  <router-outlet />
+  <router-outlet></router-outlet>
 </div>
 
 <app-footer></app-footer>

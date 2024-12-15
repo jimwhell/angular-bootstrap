@@ -34,4 +34,12 @@ export class AppComponent implements OnInit {
     console.log('app!');
     this.cartItemCount++;
   }
+
+  //removes the show class from the nav-links to close the hamburger menu automatically after selecting a link
+  collapseNavbar() {
+    const navbarCollapse = document.getElementById('navbarSupportedContent');
+    if (navbarCollapse?.classList.contains('show')) {
+      navbarCollapse.classList.remove('show');
+    }
+  }
 }

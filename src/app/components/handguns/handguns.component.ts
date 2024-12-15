@@ -26,7 +26,7 @@ export class HandgunsComponent {
     },
     {
       imageUrl: '/sig-sauer-p365.jpg',
-      gunName: 'Sig Sauer P365-AXG Legion 9mm',
+      gunName: 'Sig Sauer P365-AX 9mm',
       gunPrice: '$19.99',
     },
   ];
