@@ -1,0 +1,54 @@
+.container {
+  margin: 2rem;
+}
+
+.navbar img {
+  width: 100%;
+  height: 8rem;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.activeLink {
+  color: red;
+  border-bottom: 1px solid red;
+}
+
+.navbar-nav .nav-item.activeLink > a {
+  color: #f00;
+}
+
+.dropdown-item {
+  margin-bottom: 0.5rem;
+}
+
+.dropdown-item:last-child {
+  margin-bottom: 0;
+}
+
+.navbar li a {
+  font-weight: 400;
+}
+
+.badge {
+  color: white;
+  font-size: 1rem;
+  background-color: red;
+}
+
+.dropdown-menu {
+  padding-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    margin: 0;
+    padding: 2rem;
+  }
+}

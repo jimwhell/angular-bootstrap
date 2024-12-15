@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.shotguns-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.container .title h2 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.title h2 {
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 480px) {
+  .shotguns-container {
+    flex-direction: column;
+  }
+}

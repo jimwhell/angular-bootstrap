@@ -1,0 +1,35 @@
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: auto;
+  width: auto;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.modal-container.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.popup-modal {
+  background-color: red;
+  color: #fff;
+  padding: 30px 50px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.popup-modal p {
+  opacity: 0.8;
+  text-align: center;
+}

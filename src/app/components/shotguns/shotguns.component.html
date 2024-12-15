@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="title">
+    <h2>{{ title }}</h2>
+  </div>
+  <!-- rendered shotgun cards through property binding in product card child component and ngIf directive -->
+  <div class="shotguns-container">
+    <app-product-card
+      *ngFor="let shotgun of shotguns"
+      (cardButtonClicked)="handlePurchase(); incrementCartItems()"
+      [imgUrl]="shotgun.imageUrl"
+      [cardTitle]="shotgun.gunName"
+      [cardText]="shotgun.gunPrice"
+      [btnText]="shotgunBtnText"
+      [btnStyle]="btnColor"
+    ></app-product-card>
+  </div>
+
+  <!-- modal child component. visibility is set to true when add to cart button is clicked -->
+  <app-modal
+    [isModalVisible]="isPurchaseModalVisible"
+    [modalText]="confirmPurchaseModalText"
+    [width]="modalWidth"
+    [height]="modalHeight"
+    [textFontWeight]="modalFW"
+  ></app-modal>
+</div>

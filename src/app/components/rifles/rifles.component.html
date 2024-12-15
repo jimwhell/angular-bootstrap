@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="title">
+    <h2>{{ title }}</h2>
+  </div>
+  <!-- rendered rifle cards through property binding in product card child component and ngIf directive -->
+  <div class="rifles-container">
+    <!-- receive event from child component and fire these two functions -->
+    <app-product-card
+      *ngFor="let rifle of rifles"
+      (cardButtonClicked)="handlePurchase(); incrementCartItems()"
+      [imgUrl]="rifle.imageUrl"
+      [cardTitle]="rifle.gunName"
+      [cardText]="rifle.gunPrice"
+      [btnText]="rifleBtnText"
+      [btnStyle]="btnColor"
+    ></app-product-card>
+  </div>
+
+  <!-- modal child component. visibility is set to true when add to cart button is clicked -->
+  <app-modal
+    [isModalVisible]="isPurchaseModalVisible"
+    [modalText]="confirmPurchaseModalText"
+    [textFontWeight]="modalFW"
+    [width]="modalWidth"
+    [height]="modalHeight"
+  >
+  </app-modal>
+</div>

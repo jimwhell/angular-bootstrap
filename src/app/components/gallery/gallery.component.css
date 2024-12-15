@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.gallery-container {
+  margin-top: 9rem;
+  margin-bottom: 6rem;
+}
+
+.featured-guns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex: 1;
+  margin-bottom: 12rem;
+  flex-wrap: wrap;
+}
+
+.container .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.newsletter-subscribe .form-group input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.newsletter-subscribe .container .intro p {
+  font-size: 1.15rem;
+}
+
+.newsletter-subscribe .form-inline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.newsletter-subscribe .form-inline .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter-subscribe .form-group {
+  width: 25%;
+  margin-bottom: 1rem;
+}
+
+.form-inline .form-group .btn-primary {
+  background-color: red;
+  color: #fff;
+  padding: 0.75rem 1rem 0.75rem 1rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: 500;
+  outline: none;
+}
+
+.newsletter-subscribe {
+  margin-top: 4rem;
+}
+
+.newsletter-subscribe .container .form-inline .form-group input {
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+input:focus-within {
+  outline: none;
+}
+
+input:focus,
+button:focus {
+  outline: none; /* Removes the focus outline */
+}
+
+@media only screen and (max-width: 480px) {
+  .featured-guns {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+}

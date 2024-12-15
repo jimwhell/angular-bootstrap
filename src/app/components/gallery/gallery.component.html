@@ -1,1 +1,65 @@
-<p>gallery works!</p>
+<div class="gallery-container">
+  <div class="featured-guns">
+    <!-- render featured section using product card child component with the use of ngFor directive -->
+    <app-product-card
+      *ngFor="let gun of featuredGuns"
+      [imgUrl]="gun.imageUrl"
+      [cardTitle]="gun.gunName"
+      [cardText]="gun.gunPrice"
+      [btnText]="cardBtnText"
+      [btnStyle]="btnColor"
+      (cardButtonClicked)="redirectToShop()"
+    >
+      <!-- redirects user to handguns section when the shop now button is clicked -->
+    </app-product-card>
+  </div>
+
+  <div class="newsletter-subscribe mt-5 container">
+    <div class="container">
+      <div class="intro">
+        <h2 class="text-center newsletter">Subscribe to our Newsletter</h2>
+        <p class="text-center">{{ newsLetterText }}</p>
+      </div>
+      <form class="form-inline" method="post">
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            [(ngModel)]="emailInput"
+            String
+            interpolation
+            required
+          />
+        </div>
+        <div class="form-group">
+          <button
+            class="btn btn-primary"
+            type="button"
+            (click)="handleSubscription()"
+          >
+            Subscribe
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- <button
+    type="button"
+    class="btn btn-info btn-lg"
+    data-toggle="modal"
+    data-target="#myModal"
+  >
+    Open Modal\
+  </button> -->
+
+  <!-- Modal app child component gets shown when isModalVisible is true.  -->
+  <app-modal
+    [isModalVisible]="isSubscriptionModalVisible"
+    [modalText]="subscriptionModalText"
+    [width]="subscriptionModalWidth"
+    [height]="subscriptionModalHeight"
+  ></app-modal>
+</div>

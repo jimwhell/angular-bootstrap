@@ -1,0 +1,43 @@
+.footer-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-img img {
+  width: auto;
+  height: 30%;
+}
+
+footer {
+  margin-top: 8rem;
+  padding-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer li a {
+  text-decoration: none;
+  color: black;
+}
+
+footer p a {
+  color: black;
+}
+
+.btn {
+  background-color: red;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 12px;
+}
+
+.footer > section {
+  padding-bottom: 0 !important;
+}
+
+#credits {
+  font-size: 1.25rem;
+  margin-top: 4rem;
+  text-align: center;
+  font-weight: 500;
+}

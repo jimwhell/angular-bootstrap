@@ -1,0 +1,18 @@
+<div class="card" style="width: 18rem">
+  <img
+    class="card-img-top"
+    [src]="imgUrl"
+    alt="Card image cap"
+    [width]="cardImageWidth"
+    [height]="cardImageHeight"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ cardTitle }}</h5>
+    <p class="card-text">
+      {{ cardText }}
+    </p>
+    <a class="btn" (click)="handleButtonClick()" [class]="btnStyle">{{
+      btnText
+    }}</a>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+.jumbotron {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+.jumbotron img {
+  width: auto;
+  object-fit: contain;
+  height: 400px;
+}
+
+.lead {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.sub-heading {
+  width: 60%;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.btn-danger {
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+@media only screen and (max-width: 480px) {
+  .jumbotron {
+    width: 100%;
+  }
+  .jumbotron img {
+    width: 100%;
+  }
+
+  .sub-heading {
+    width: 100%;
+    line-height: 2;
+  }
+}

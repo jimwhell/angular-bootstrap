@@ -1,5 +1,104 @@
-<app-header></app-header>
-<app-featured></app-featured>
+<!-- header -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand me-5" routerLink="/"
+      ><img src="ammunation-logo.png" alt=""
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- implemented Angular routing to nav-links. Used routerlink, routerLinkActive, and routerLinkActiveOptions to notuify the user of the active link through a custom class. -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-2">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            aria-current="page"
+            routerLink="/"
+            routerLinkActive="activeLink"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"></a>
+        </li>
+        <li class="nav-item dropdown" routerLinkActive="activeLink">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Firearms
+          </a>
+          <ul class="dropdown-menu mt-3">
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="/firearms/handguns"
+                routerLinkActive="activeLink"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Handguns</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="/firearms/rifles"
+                routerLinkActive="activeLink"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Rifles</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="/firearms/shotguns"
+                routerLinkActive="activeLink"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Shotguns</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-disabled="true">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-disabled="true"
+            ><i class="fa cart" style="font-size: 24px">&#xf07a;</i>
+            <!-- String interpolation to display cartItemCount  -->
+            <span class="badge badge-warning" id="lblCartCount">{{
+              cartItemCount
+            }}</span></a
+          >
+        </li>
+      </ul>
+      <form class="d-flex me-5" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-black" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
 
+<div class="container">
+  <router-outlet />
+</div>
 
-<router-outlet />
+<app-footer></app-footer>
